@@ -1,0 +1,139 @@
+// rockymeza.com Stylesheet
+// by Rocky Meza
+
+
+// Variables - Fonts
+$normalfont: Arial, Helvetica, sans-serif;
+$specialfont: Georgia;
+
+// Variables - Colors
+$grey: #666;
+
+
+
+// Mixins - Style
+@mixin container {
+  @include border-radius(.3em);
+
+  ul {
+    padding-left: 2em;
+  }
+
+  a {
+    color: $grey;
+    text-decoration: none;
+  }
+
+  background: white;
+  color: black;
+
+  // UGGGh
+  .inner {
+    @include padded;
+  }
+}
+
+// Generic
+body {
+  background: url("/static/image/background.png") repeat;
+  color: $grey;
+  font-family: $normalfont;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+h1 {
+	font-family: $specialfont;
+	font-size: 2em;
+
+  a {
+    text-decoration: none;
+  }
+}
+h2 {
+	color: $grey;
+	font-family: $specialfont;
+	font-size: 1.5em;
+  margin-bottom: .5em;
+}
+ul {
+  list-style: disc;
+}
+
+// Layout
+header#header {
+  text-align: center;
+
+  h1 {
+    @include transform(rotate(180deg));
+
+    color: white;
+    display: inline;
+    font-size: 3em;
+
+    // this adds padding to the top, because we are upside-down
+    padding-bottom: .5em;
+
+    img {
+      @include transform(rotate(180deg));
+      
+      vertical-align: middle;
+    }
+  }
+
+}
+
+nav {
+  @include clearfix;
+  @include padded;
+
+  ul {
+    @include nolist;
+  }
+
+  .internal {
+    float: left;
+    text-transform: lowercase;
+  }
+
+  .external {
+    float: right;
+
+    &:before {
+      content: "As seen on: ";
+    }
+  }
+}
+
+#main {
+  @include clearfix;
+
+  #content {
+    @include column(8);
+    @include container;
+  }
+  
+  #sidebar {
+    @include column(4);
+    @include container;
+  }
+}
+
+footer {
+  @include clearfix;
+  @include padded;
+
+  text-align: center;
+}
+
+@media screen and (max-width: 720px) {
+  #main {
+    #content,
+    #sidebar {
+      @include column(12);
+      margin-bottom: 1em;
+    }
+  }
+}

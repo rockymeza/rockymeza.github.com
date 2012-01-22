@@ -1,0 +1,4 @@
+deploy_path: "_site"
+host: http://rockymeza.com
+meta:
+  title: rockymeza.com

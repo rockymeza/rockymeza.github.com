@@ -1,0 +1,36 @@
+// Mixins - Generic
+@mixin padded {
+  padding: 1em;
+}
+@mixin fr {
+  float: right;
+  padding-left: 1em;
+}
+@mixin fl {
+  float: left;
+  padding-right: 1em;
+}
+@mixin nolist {
+  & {
+    list-style: none;
+  }
+
+  li {
+    list-style: none;
+    display: inline;
+  }
+}
+
+// Mixins - CSS3
+@mixin transform($transformation) {
+  transform: $transformation;
+  -webkit-transform: $transformation;
+  -moz-transform: $transformation;
+  -o-transform: $transformation;
+}
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -o-border-radius: $radius;
+}
