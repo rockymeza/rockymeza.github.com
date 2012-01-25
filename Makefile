@@ -3,29 +3,43 @@
 
 SCSS=sass --scss
 STRANGE_CASE=python /home/rocky/projects/StrangeCase/strange_case.py
-PREFIX=_site
-STATICPREFIX=_site/static/
 
+BUILDDIR=_site
+SRCDIR=site
+
+# static variables
+STATICPREFIX=$(BUILDDIR)/static
 
 CSS_SOURCES=$(wildcard semantic.gs/*css) $(wildcard css/*.scss)
-CSS_TARGETS=$(STATICPREFIX)css/screen.css
-IMAGE_SOURCES=$(wildcard image/*)
-IMAGE_TARGETS=$(addprefix $(STATICPREFIX),$(IMAGE_SOURCES))
+CSS_TARGETS=$(STATICPREFIX)/css/screen.css
+CSS_DIR=$(STATICPREFIX)/css
 
+IMAGE_SOURCES=$(wildcard image/*)
+IMAGE_TARGETS=$(addprefix $(STATICPREFIX)/,$(IMAGE_SOURCES))
+IMAGE_DIR=$(STATICPREFIX)/image
+
+# site variables
+LAYOUT_SOURCES=$(wildcard layouts/*)
+SITE_SOURCES=$(wildcard $(SRCDIR)/*)
+SITE_TARGETS=$(patsubst $(SRCDIR)%,$(BUILDDIR)%,$(subst jinja,html,$(SITE_SOURCES)))
+
+
+.PHONY: all
+all: build
 
 .PHONY: build
 build: site collectstatic
 
 
 # Ensure all directories
-$(PREFIX):
-	mkdir $(PREFIX)
+$(BUILDDIR):
+	mkdir $@
 
-$(STATICPREFIX): $(PREFIX)
-	mkdir $(STATICPREFIX)
-	mkdir $(STATICPREFIX)css
-	mkdir $(STATICPREFIX)image
-	mkdir $(STATICPREFIX)js
+$(STATICPREFIX): $(BUILDDIR)
+	mkdir $@
+
+$(CSS_DIR) $(IMAGE_DIR): $(STATICPREFIX)
+	mkdir $@
 
 
 # static files
@@ -33,25 +47,29 @@ $(CSS_TARGETS): $(CSS_SOURCES)
 	cat $^ | $(SCSS) > $@
 
 .PHONY: css
-css: $(STATICPREFIX) $(CSS_TARGETS)
+css: $(CSS_DIR) $(CSS_TARGETS)
 
 $(IMAGE_TARGETS): $(IMAGE_SOURCES)
-	cp $^ $(STATICPREFIX)image/
+	cp $^ $(IMAGE_DIR)
 
 .PHONY: image
-image: $(STATICPREFIX) $(IMAGE_TARGETS)
+image: $(IMAGE_DIR) $(IMAGE_TARGETS)
 
 .PHONY: collectstatic
-collectstatic: $(STATICPREFIX) $(CSS_TARGETS) $(IMAGE_TARGETS)
+collectstatic: $(STATICDIRS) $(CSS_TARGETS) $(IMAGE_TARGETS)
+
 
 # StrangeCase
-.PHONY: site
-site: $(PREFIX) $(wildcard layouts/*.jinja) $(wildcard site/*.jinja)
+$(SITE_TARGETS): $(SITE_SOURCES) $(LAYOUT_SOURCES)
 	$(STRANGE_CASE)
 
+.PHONY: site
+site: $(BUILDDIR) $(SITE_TARGETS)
 
+
+# cleanup
 .PHONY: clean clean-static
 clean:
-	rm -r $(PREFIX)
+	rm -r $(BUILDDIR)
 clean-static:
 	rm -r $(STATICPREFIX)
