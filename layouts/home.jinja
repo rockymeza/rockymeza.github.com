@@ -1,0 +1,18 @@
+{% extends "layouts/base.jinja" %}
+
+{% block body_class %}home{% endblock %}
+
+{% block main %}
+  <article id="blogs">
+    <div class="inner">
+      {% block blogs %}
+      {% endblock %}
+    </div>
+  </article>
+  <article id="projects">
+    <div class="inner">
+      {% block projects %}
+      {% endblock %}
+    </div>
+  </article>
+{% endblock %}

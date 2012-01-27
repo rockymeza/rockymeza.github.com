@@ -1,9 +1,33 @@
 ---
 title: rockymeza.com
-header: projects, blogs, and whatnot
 ---
-{% extends 'layouts/base.jinja' %}
+{% extends 'layouts/home.jinja' %}
 
-{% block content %}
+{% block blogs %}
 <h2>Blog</h2>
+
+{% if site.blog %}
+<ul>
+  {% for blog in site.blog %}
+  <li><span class="date">{{ blog.date|date }}</span> <a href="{{ blog.url }}">{{ blog.title }}</a>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}
+
+{% block projects %}
+<h2>Projects</h2>
+
+{% if site.projects %}
+<ul>
+  {% for project in site.projects %}
+  <li>
+    <a href="{{ project.url }}">{{ project.title }}</a>
+    {% if project.github %}
+    | <a href="{{ project.github }}">github</a>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
 {% endblock %}

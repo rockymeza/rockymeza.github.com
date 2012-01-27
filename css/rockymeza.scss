@@ -47,6 +47,7 @@ body {
 h1 {
 	font-family: $specialfont;
 	font-size: 2em;
+  margin-bottom: .5em;
 
   a {
     text-decoration: none;
@@ -93,11 +94,6 @@ nav {
     @include nolist;
   }
 
-  .internal {
-    float: left;
-    text-transform: lowercase;
-  }
-
   .external {
     float: right;
 
@@ -129,11 +125,46 @@ footer {
 }
 
 @media screen and (max-width: 720px) {
+  nav {
+    .external {
+      float: none;
+      display: block;
+    }
+  }
+
   #main {
     #content,
     #sidebar {
       @include column(12);
       margin-bottom: 1em;
     }
+  }
+
+  .home {
+    #main {
+      #blogs, #projects {
+        @include column(12);
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    img {
+      float: left;
+    }
+
+    .rocky {
+      @include transform(rotate(180deg));
+    }
+  }
+}
+
+.home {
+  #blogs, #projects {
+    @include column(4);
+    @include container;
   }
 }
