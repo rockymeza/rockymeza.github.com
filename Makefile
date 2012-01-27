@@ -21,7 +21,7 @@ IMAGE_DIR=$(STATICPREFIX)/image
 # site variables
 LAYOUT_SOURCES=$(wildcard layouts/*)
 SITE_SOURCES=$(wildcard $(SRCDIR)/*)
-SITE_TARGETS=$(patsubst $(SRCDIR)%,$(BUILDDIR)%,$(subst jinja,html,$(SITE_SOURCES)))
+SITE_TARGETS=$(patsubst $(SRCDIR)%,$(BUILDDIR)%,$(subst md,html,$(subst jinja,html,$(SITE_SOURCES))))
 
 
 .PHONY: all

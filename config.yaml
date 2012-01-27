@@ -2,5 +2,6 @@ deploy_path: "_site"
 host: http://rockymeza.com
 rename_extensions:
   .jinja: .html
+  .md: .html
 meta:
   title: rockymeza.com

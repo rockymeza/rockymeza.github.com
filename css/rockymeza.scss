@@ -7,7 +7,8 @@ $normalfont: Arial, Helvetica, sans-serif;
 $specialfont: Georgia;
 
 // Variables - Colors
-$grey: #666;
+$grey: #666666;
+$lightgrey: #AAAAAA;
 
 
 
@@ -42,6 +43,30 @@ body {
   a {
     color: white;
     text-decoration: none;
+  }
+
+  p {
+    line-height: 1.2em;
+    margin-bottom: 1em;
+  }
+
+  pre, code {
+    @include border-radius(3px);
+
+    background-color: $lightgrey;
+    color: black;
+    font-family: monospace;
+    padding: 2px;
+  }
+
+  pre {
+    margin-bottom: 1em;
+    padding: 5px;
+    width: 90%;
+
+    code {
+      padding: 0;
+    }
   }
 }
 h1 {
