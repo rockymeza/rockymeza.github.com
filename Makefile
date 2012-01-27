@@ -65,10 +65,7 @@ site: $(BUILDDIR)
 
 .PHONY: deploy
 deploy:
-	cd $(BUILDDIR)
-	git add .
-	git commit -m '`date +%c`'
-	git push origin master
+	cd $(BUILDDIR); git add .; git commit -m '`date +%c`'; git push origin master
 
 # cleanup
 .PHONY: clean clean-static
