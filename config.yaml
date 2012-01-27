@@ -3,5 +3,6 @@ host: http://rockymeza.com
 rename_extensions:
   .jinja: .html
   .md: .html
+dont_process: CNAME
 meta:
   title: rockymeza.com
