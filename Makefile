@@ -10,18 +10,17 @@ SRCDIR=site
 # static variables
 STATICPREFIX=$(BUILDDIR)/static
 
-CSS_SOURCES=$(wildcard semantic.gs/*css) $(wildcard css/*.scss)
-CSS_TARGETS=$(STATICPREFIX)/css/screen.css
 CSS_DIR=$(STATICPREFIX)/css
+CSS_SOURCES=$(wildcard semantic.gs/*css) $(wildcard css/*.scss)
+CSS_TARGETS=$(CSS_DIR)/screen.css
 
+IMAGE_DIR=$(STATICPREFIX)/image
 IMAGE_SOURCES=$(wildcard image/*)
 IMAGE_TARGETS=$(addprefix $(STATICPREFIX)/,$(IMAGE_SOURCES))
-IMAGE_DIR=$(STATICPREFIX)/image
 
 # site variables
 LAYOUT_SOURCES=$(wildcard layouts/*)
 SITE_SOURCES=$(wildcard $(SRCDIR)/*)
-SITE_TARGETS=$(patsubst $(SRCDIR)%,$(BUILDDIR)%,$(subst md,html,$(subst jinja,html,$(SITE_SOURCES))))
 
 
 .PHONY: all
@@ -32,10 +31,11 @@ build: site collectstatic
 
 
 # Ensure all directories
-$(BUILDDIR):
-	mkdir $@
+$(BUILDDIR): $(SITE_SOURCES) $(LAYOUT_SOURCES)
+	echo $^
+	$(STRANGE_CASE)
 
-$(STATICPREFIX): $(BUILDDIR)
+$(STATICPREFIX):
 	mkdir $@
 
 $(CSS_DIR) $(IMAGE_DIR): $(STATICPREFIX)
@@ -59,17 +59,20 @@ image: $(IMAGE_DIR) $(IMAGE_TARGETS)
 collectstatic: $(STATICDIRS) $(CSS_TARGETS) $(IMAGE_TARGETS)
 
 
-# StrangeCase
-$(SITE_TARGETS): $(SITE_SOURCES) $(LAYOUT_SOURCES)
-	$(STRANGE_CASE)
-
 .PHONY: site
-site: $(BUILDDIR) $(SITE_TARGETS)
+site: $(BUILDDIR)
+
+
+.PHONY: deploy
+deploy:
+	cd $(BUILDDIR)
+	git ci -am 'build site'
+	gpp
 
 
 # cleanup
 .PHONY: clean clean-static
 clean:
-	rm -r $(BUILDDIR)
+	rm -r $(BUILDDIR)/*
 clean-static:
 	rm -r $(STATICPREFIX)
