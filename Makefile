@@ -66,8 +66,8 @@ site: $(BUILDDIR)
 .PHONY: deploy
 deploy:
 	cd $(BUILDDIR)
-	git ci -am 'build site'
-	gpp
+	git commit -am 'build site'
+	git push origin master
 
 
 # cleanup
