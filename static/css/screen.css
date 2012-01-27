@@ -100,15 +100,14 @@ ul {
 header#header {
   text-align: center; }
   header#header h1 {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
     color: white;
     display: inline;
     font-size: 3em;
     padding-bottom: .5em; }
-    header#header h1 span {
-      transform: rotate(180deg);
-      -webkit-transform: rotate(180deg);
-      -moz-transform: rotate(180deg);
-      -o-transform: rotate(180deg); }
     header#header h1 img {
       transform: rotate(180deg);
       -webkit-transform: rotate(180deg);
