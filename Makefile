@@ -4,6 +4,8 @@
 SCSS=sass --scss
 STRANGE_CASE=python /home/rocky/projects/StrangeCase/strange_case.py
 
+RIGHTNOW=`date +'%c'`
+
 BUILDDIR=_site
 SRCDIR=site
 
@@ -65,7 +67,7 @@ site: $(BUILDDIR)
 
 .PHONY: deploy
 deploy:
-	cd $(BUILDDIR); git add .; git commit -m '`date +%c`'; git push origin master
+	cd $(BUILDDIR); git add .; git commit -m '$(RIGHTNOW)'; git push origin master
 
 # cleanup
 .PHONY: clean clean-static
