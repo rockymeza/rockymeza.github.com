@@ -12,6 +12,8 @@ title: rockymeza.com
   <li><span class="date">{{ blog.date|date }}</span> <a href="{{ blog.url }}">{{ blog.title }}</a>
   {% endfor %}
 </ul>
+{% else %}
+<p>There are no blog posts right now.</p>
 {% endif %}
 {% endblock %}
 
