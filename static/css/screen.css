@@ -89,7 +89,6 @@ h1 {
     border: 0 none; }
 
 h2 {
-  color: #666666;
   font-family: Georgia;
   font-size: 1.5em;
   margin-bottom: .5em; }
@@ -154,10 +153,12 @@ nav {
     #main #content ul {
       padding-left: 2em; }
     #main #content a {
-      color: #666666;
+      color: #444444;
       text-decoration: none; }
     #main #content .inner {
       padding: 1em; }
+  #main #content h2 {
+    font-size: 1.25em; }
   #main #sidebar {
     display: inline;
     float: left;
@@ -172,7 +173,7 @@ nav {
     #main #sidebar ul {
       padding-left: 2em; }
     #main #sidebar a {
-      color: #666666;
+      color: #444444;
       text-decoration: none; }
     #main #sidebar .inner {
       padding: 1em; }
@@ -228,7 +229,12 @@ footer {
   .home #blogs ul, .home #projects ul {
     padding-left: 2em; }
   .home #blogs a, .home #projects a {
-    color: #666666;
+    color: #444444;
     text-decoration: none; }
   .home #blogs .inner, .home #projects .inner {
     padding: 1em; }
+
+.blog .byline {
+  color: #666666;
+  font-size: 0.75em;
+  margin-top: -1em; }
