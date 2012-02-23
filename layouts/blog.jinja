@@ -1,0 +1,9 @@
+{% extends "layouts/base.jinja" %}
+
+{% block body_class %}blog{% endblock %}
+{% block content %}
+<h1>{{ title }}</h1>
+<p class="byline">posted on <span class="date">{{ date|date }}</span></p>
+
+{% block blog %}{% endblock %}
+{% endblock %}
