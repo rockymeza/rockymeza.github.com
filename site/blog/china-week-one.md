@@ -63,7 +63,7 @@ off experiencing the grimy streets of Victorian London.
 
 ## 感冒好了(gǎn mào hǎo le---to get better after getting sick)
 
-After 多河水(duō hé shuǐ---drink more water) and
+After 多喝水(duō hē shuǐ---drink more water) and
 [visiting](http://www.flickr.com/photos/rockymeza/6777221466/in/photostream)
 [the](http://www.flickr.com/photos/rockymeza/6777219218/in/photostream)
 [doctor](http://www.flickr.com/photos/rockymeza/6923334583/in/photostream), I am
