@@ -73,5 +73,20 @@ and I am [out](http://www.flickr.com/photos/rockymeza/6777192562/in/photostream)
 [explore](http://www.flickr.com/photos/rockymeza/6849380493/in/photostream)
 [Beijing](http://www.flickr.com/photos/rockymeza/6849378651/in/photostream).
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+### Comments (1) ###
+
+#### Glad to hear you're feeling better! ####
+*by [Colin Thomas-Arnold][colinta]*
+
+Didn't even know you got sick, that *is* bummer.
+
+Wet weather is such a different beast.  It cuts to the core!  Stay bundled up!
+
+  [colinta] http://colinta.com
+<small>Feb 24, 2012</small>
+
+
 {% endmarkdown2 %}
 {% endblock %}
