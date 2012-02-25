@@ -6,3 +6,11 @@ rename_extensions:
 dont_process: CNAME
 meta:
   title: rockymeza.com
+extensions:
+  - extensions.markdown2_extension.Markdown2Extension
+filters:
+  date: extensions.date_extension.date
+  markdown2: extensions.markdown2_extension.markdown2
+processors:
+  - processors.image
+  - processors.categories
