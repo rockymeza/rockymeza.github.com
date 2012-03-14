@@ -3,6 +3,13 @@ host: http://rockymeza.com
 rename_extensions:
   .jinja: .html
   .md: .html
-dont_process: CNAME
 meta:
   title: rockymeza.com
+extensions:
+  - strange_case.extensions.Markdown2Extension
+filters:
+  date: strange_case.extensions.date
+  markdown2: strange_case.extensions.markdown
+processors:
+  - strange_case.extensions.image_processor
+  - strange_case.extensions.category_processor
