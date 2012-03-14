@@ -4,7 +4,7 @@ github: https://www.github.com/rockymeza/b
 ---
 {% extends "layouts/base.jinja" %}
 {% block content %}
-{% markdown2 %}
+{% markdown %}
 # b, a simple bookmarking system
 I have a lot of projects on my computer.  They are not all in the same folder.
 They sometimes have similar names.  I used to spend a lot of time typing out
@@ -43,5 +43,5 @@ b stores bookmarks in plain text in `$BOOKMARKS_FILE`, and uses `grep` and
 be additional features in the future.  You can follow development and contribute
 on [GitHub]({{ github }}).
 
-{% endmarkdown2 %}
+{% endmarkdown %}
 {% endblock %}

@@ -4,7 +4,7 @@ date: 2012-02-23
 ---
 {% extends "layouts/blog.jinja" %}
 {% block blog %}
-{% markdown2 %}
+{% markdown %}
 As you may or may not know, the name of the capital city of the People's
 Republic of China, 北京(bēi jīng) is composed of two characters.  The first,
 北(bēi), means North.  The second, 京(jīng), means capital.  As such, Beijing
@@ -88,5 +88,5 @@ Wet weather is such a different beast.  It cuts to the core!  Stay bundled up!
 <small>Feb 24, 2012</small>
 
 
-{% endmarkdown2 %}
+{% endmarkdown %}
 {% endblock %}
