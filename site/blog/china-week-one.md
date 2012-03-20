@@ -1,5 +1,6 @@
 ---
 title: "In Beijing No. 1: 生病了(shēng bìng le)"
+uniqid: 2012-02-23-sheng-bing-le
 date: 2012-02-23
 ---
 {% extends "layouts/blog.jinja" %}
@@ -77,4 +78,7 @@ my happy and healthy state.  I am no longer restrained to my bed and I am
 Fixed tone on běijīng.
 
 {% endmarkdown %}
+<script>
+var disqus_identifier = '{{ uniqid }}';
+</script>
 {% endblock %}
