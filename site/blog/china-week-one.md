@@ -6,8 +6,8 @@ date: 2012-02-23
 {% block blog %}
 {% markdown %}
 As you may or may not know, the name of the capital city of the People's
-Republic of China, 北京(bēi jīng) is composed of two characters.  The first,
-北(bēi), means North.  The second, 京(jīng), means capital.  As such, Beijing
+Republic of China, 北京(běi jīng) is composed of two characters.  The first,
+北(běi), means North.  The second, 京(jīng), means capital.  As such, Beijing
 could be called the Northern capital.  It is thus named to distinguish it from
 南京(nán jīng---Southern Capital), which was at some point during some dynasty
 (and around World War II) the capital of China.
@@ -73,20 +73,9 @@ and I am [out](http://www.flickr.com/photos/rockymeza/6777192562/in/photostream)
 [explore](http://www.flickr.com/photos/rockymeza/6849380493/in/photostream)
 [Beijing](http://www.flickr.com/photos/rockymeza/6849378651/in/photostream).
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - -
+## 2012-03-20 Update:
 
-### Comments (1) ###
-
-#### Glad to hear you're feeling better! ####
-*by [Colin Thomas-Arnold][colinta]*
-
-Didn't even know you got sick, that *is* bummer.
-
-Wet weather is such a different beast.  It cuts to the core!  Stay bundled up!
-
-  [colinta] http://colinta.com
-<small>Feb 24, 2012</small>
-
+Fixed tone on běijīng.
 
 {% endmarkdown %}
 {% endblock %}
