@@ -2,7 +2,7 @@
 # by Rocky Meza
 
 SCSS=sass --scss
-STRANGE_CASE=python /home/rocky/projects/StrangeCase/strange_case.py
+STRANGE_CASE=scase
 
 RIGHTNOW=`date +'%c'`
 

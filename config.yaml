@@ -1,4 +1,6 @@
 deploy_path: "_site"
+remove_stale_files: false
+dont_remove: ['*_site/static/*']
 host: http://rockymeza.com
 rename_extensions:
   .jinja: .html
@@ -9,7 +11,7 @@ extensions:
   - strange_case.extensions.Markdown2Extension
 filters:
   date: strange_case.extensions.date
-  markdown2: strange_case.extensions.markdown
+  markdown: strange_case.extensions.markdown
 processors:
   - strange_case.extensions.image_processor
   - strange_case.extensions.category_processor
