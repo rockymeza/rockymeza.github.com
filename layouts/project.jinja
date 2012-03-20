@@ -1,0 +1,17 @@
+{% extends "layouts/base.jinja" %}
+
+{% block body_class %}project{% endblock %}
+{% block sidebar %}
+<h2>Projects</h2>
+
+<ul>
+  {% for project in site.projects %}
+  <li>
+    <a href="{{ project.url }}">{{ project.title }}</a>
+    {% if project.github %}
+    | <a href="{{ project.github }}">github</a>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

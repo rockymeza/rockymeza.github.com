@@ -6,4 +6,30 @@
 <p class="byline">posted on <span class="date">{{ date|date }}</span></p>
 
 {% block blog %}{% endblock %}
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'rockymeza'
+  , disqus_identifier = {{ url }}
+  , disqus_url = {{ url }}
+  ;
+
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span
+class="logo-disqus">Disqus</span></a>
+{% endblock %}
+
+{% block sidebar %}
+<h2>Blog</h2>
+
+<ul>
+  {% for blog in site.blog %}
+  <li><span class="date">{{ blog.date|date }}</span> <a href="{{ blog.url }}">{{ blog.title }}</a>
+  {% endfor %}
+</ul>
 {% endblock %}

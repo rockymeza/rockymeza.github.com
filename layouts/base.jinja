@@ -36,8 +36,10 @@
     </article>
     {% endblock %}
 
+    {% block rightside %}
     <aside id="sidebar">
       <div class="inner">
+        {% block sidebar %}
         <h2>What is Rocky?</h2>
 
         <ul>
@@ -46,8 +48,10 @@
           <li>plays viola.
           <li>in <a href="http://g.co/maps/hw23z" title="...starting 7 February 2012">China</a>.
         </ul>
+        {% endblock %}
       </div>
     </aside>
+    {% endblock %}
   </section>
 
   <footer>

@@ -2,7 +2,7 @@
 title: b
 github: https://www.github.com/rockymeza/b
 ---
-{% extends "layouts/base.jinja" %}
+{% extends "layouts/project.jinja" %}
 {% block content %}
 {% markdown %}
 # b, a simple bookmarking system
