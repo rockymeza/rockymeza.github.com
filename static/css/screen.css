@@ -154,12 +154,14 @@ nav {
     #main #content ul {
       padding-left: 2em; }
     #main #content a {
-      color: #444444;
+      color: #339933;
       text-decoration: none; }
     #main #content .inner {
       padding: 1em; }
-  #main #content h2 {
-    font-size: 1.25em; }
+    #main #content h2 {
+      font-size: 1.25em; }
+    #main #content .dsq-brlink, #main #content #disqus_thread a {
+      color: black; }
   #main #sidebar {
     display: inline;
     float: left;
@@ -174,7 +176,7 @@ nav {
     #main #sidebar ul {
       padding-left: 2em; }
     #main #sidebar a {
-      color: #444444;
+      color: #339933;
       text-decoration: none; }
     #main #sidebar .inner {
       padding: 1em; }
@@ -230,7 +232,7 @@ footer {
   .home #blogs ul, .home #projects ul {
     padding-left: 2em; }
   .home #blogs a, .home #projects a {
-    color: #444444;
+    color: #339933;
     text-decoration: none; }
   .home #blogs .inner, .home #projects .inner {
     padding: 1em; }
