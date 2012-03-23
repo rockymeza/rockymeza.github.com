@@ -66,12 +66,24 @@ $(JS_TARGETS): $(JS_SOURCES)
 .PHONY: js
 js: $(JS_DIR) $(JS_TARGETS)
 
-.PHONY: collectstatic
+.PHONY: collectstatic watch-static
 collectstatic: $(CSS_TARGETS) $(IMAGE_TARGETS) $(JS_TARGETS)
 
+watch-static:
+	watchmedo shell-command --command='make collectstatic' --patterns='*.js;*css' --recursive
 
-.PHONY: site
+
+.PHONY: site watch-site
 site: $(BUILDDIR)
+
+watch-site:
+	watchmedo shell-command --command='make site' --patterns='*.md;*.j2' --recursive
+
+
+.PHONY: serve
+serve:
+	cd $(BUILDDIR); python -m SimpleHTTPServer
+
 
 
 .PHONY: deploy
