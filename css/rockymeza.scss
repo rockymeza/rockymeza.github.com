@@ -10,6 +10,7 @@ $specialfont: Georgia;
 $darkgrey: #444444;
 $grey: #666666;
 $lightgrey: #AAAAAA;
+$green: #339933;
 
 
 
@@ -22,7 +23,7 @@ $lightgrey: #AAAAAA;
   }
 
   a {
-    color: $darkgrey;
+    color: $green;
     text-decoration: none;
   }
 
@@ -135,11 +136,13 @@ nav {
   #content {
     @include column(8);
     @include container;
-  }
 
-  #content {
     h2 {
       font-size: 1.25em;
+    }
+
+    .dsq-brlink, #disqus_thread a {
+      color: black;
     }
   }
   
