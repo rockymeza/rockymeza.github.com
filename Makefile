@@ -4,7 +4,7 @@
 SCSS=sass --scss
 STRANGE_CASE=scase
 
-RIGHTNOW=`date +'%c'`
+RIGHTNOW=$(shell date +'%c')
 
 BUILDDIR=_site
 SRCDIR=site
