@@ -13,12 +13,16 @@ SRCDIR=site
 STATICPREFIX=$(BUILDDIR)/static
 
 CSS_DIR=$(STATICPREFIX)/css
-CSS_SOURCES=$(wildcard semantic.gs/*css) $(wildcard css/*.scss)
+CSS_SOURCES=$(wildcard semantic.gs/*css) $(wildcard css/*.scss) $(wildcard uikit/*.css)
 CSS_TARGETS=$(CSS_DIR)/screen.css
 
 IMAGE_DIR=$(STATICPREFIX)/image
 IMAGE_SOURCES=$(wildcard image/*)
 IMAGE_TARGETS=$(addprefix $(STATICPREFIX)/,$(IMAGE_SOURCES))
+
+JS_DIR=$(STATICPREFIX)/js
+JS_SOURCES=$(wildcard uikit/*.js) $(wildcard js/*)
+JS_TARGETS=$(JS_DIR)/r.js
 
 # site variables
 LAYOUT_SOURCES=$(wildcard layouts/*)
@@ -34,13 +38,12 @@ build: site collectstatic
 
 # Ensure all directories
 $(BUILDDIR): $(SITE_SOURCES) $(LAYOUT_SOURCES)
-	echo $^
 	$(STRANGE_CASE)
 
 $(STATICPREFIX):
 	mkdir $@
 
-$(CSS_DIR) $(IMAGE_DIR): $(STATICPREFIX)
+$(JS_DIR) $(CSS_DIR) $(IMAGE_DIR): $(STATICPREFIX)
 	mkdir $@
 
 
@@ -57,8 +60,14 @@ $(IMAGE_TARGETS): $(IMAGE_SOURCES)
 .PHONY: image
 image: $(IMAGE_DIR) $(IMAGE_TARGETS)
 
+$(JS_TARGETS): $(JS_SOURCES)
+	cat $^ > $@
+
+.PHONY: js
+js: $(JS_DIR) $(JS_TARGETS)
+
 .PHONY: collectstatic
-collectstatic: $(STATICDIRS) $(CSS_TARGETS) $(IMAGE_TARGETS)
+collectstatic: $(CSS_TARGETS) $(IMAGE_TARGETS) $(JS_TARGETS)
 
 
 .PHONY: site
