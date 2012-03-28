@@ -2,8 +2,9 @@
 title: "Contemporary China No. 1: Healthcare"
 uniqid: 2012-03-29-healthcare
 date: 2012-03-29
+author: Rocky
 ---
-{% extends "layouts/blog.jinja" %}
+{% extends "layouts/contemporary_china.jinja" %}
 {% block blog %}
 {% markdown %}
 OK, so I finally feel experienced enough with the healthcare system in China to

@@ -161,6 +161,16 @@ nav {
     .dsq-brlink, #disqus_thread a {
       color: black;
     }
+
+    .notice {
+      color: $grey;
+      font-style: italic;
+      font-size: .75em;
+
+      em {
+        font-style: normal;
+      }
+    }
   }
   
   #sidebar {
