@@ -77,7 +77,7 @@ watch-static:
 site: $(BUILDDIR)
 
 watch-site:
-	watchmedo shell-command --command='make site' --patterns='*.md;*.j2' --recursive
+	watchmedo shell-command --command='make site' --patterns='*.md;*.jinja' --recursive
 
 
 .PHONY: serve
