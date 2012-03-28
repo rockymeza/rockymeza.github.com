@@ -18,7 +18,7 @@ $green: #339933;
 @mixin container {
   @include border-radius(.3em);
 
-  ul {
+  ol, ul {
     padding-left: 2em;
   }
 
@@ -236,6 +236,14 @@ footer {
     color: $grey;
     font-size: 0.75em;
     margin-top: -1em;
+  }
+
+  .footnotes {
+    font-size: 0.75em;
+
+    ol {
+      list-style: decimal;
+    }
   }
 }
 
