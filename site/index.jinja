@@ -8,7 +8,7 @@ title: rockymeza.com
 
 {% if site.blog %}
 <ul>
-  {% for blog in site.blog %}
+  {% for blog in site.blog|reverse %}
   <li><span class="date">{{ blog.date|date }}</span> <a href="{{ blog.url }}">{{ blog.title }}</a>
   {% endfor %}
 </ul>

@@ -25,7 +25,7 @@ class="logo-disqus">Disqus</span></a>
 <h2>Blog</h2>
 
 <ul>
-  {% for blog in site.blog %}
+  {% for blog in site.blog|reverse %}
   <li><span class="date">{{ blog.date|date }}</span> <a href="{{ blog.url }}">{{ blog.title }}</a>
   {% endfor %}
 </ul>
