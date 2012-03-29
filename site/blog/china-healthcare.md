@@ -15,7 +15,7 @@ Chinese healthcare with one word, it would be "multi-faceted and
 variegated[^variegated]".
 
 
-## 中国农业大学东区社区卫生服务中心
+## 中国农业大学东区社区卫生服务中心 (zhōngguó nóngyè dàxué dōngqū shèqū wèishēng fúwù zhōngxīn)
 When I got sick the first time, I (with the help of 张老师 and Betty) visited
 the small clinic on campus.  [![Visited the
 clinic](http://farm8.staticflickr.com/7189/6777221466_65c0c50c27.jpg)](http://www.flickr.com/photos/rockymeza/6777221466/)
@@ -32,7 +32,7 @@ throat though with a little yellow flashlight (you can see it in the picture).
 
 I was then ordered to do a blood test.  We returned to the counter to ask for a
 blood test and then were sent upstairs.  The blood test took twenty minutes and
-cost about 15 RMB (around three USD). [![Blood
+cost about 15 RMB (around 3 USD). [![Blood
 Test](http://farm8.staticflickr.com/7188/6777219218_cbe0b870a7.jpg)](http://www.flickr.com/photos/rockymeza/6777219218/)
 
 After all of this, I returned to the doctor who prescribed to me some
@@ -40,10 +40,12 @@ amoxicillin and other medications which I'm altogether unsure of what they were.
 I got better on the medication and was back on my feet pretty quick.
 
 
-## 北京体育大学
-Alex has a fire in his heart.  Or rather, in his stomach.  In other words, he
+## 北京体育大学 (běijīng tǐyù dàxué)
+Alex has a fire in his eyes.  Or rather, in his stomach.  In other words, he
 always feels hungry, even when he is full.  In the US, Alex used to visit an
-acupuncturist, so he is used to the routine.
+acupuncturist, so he is used to the routine.  Other than acupuncture, he could
+use the traditional remedy of eating vegetables to alleviate his hunger---but
+that is a little tough for some people.
 
 We accompanied 张老师 to the acupuncturist at 北京体育大学 (běijīng tǐyù
 dàxué--Beijing Athletic University).  [![Orthopedics
@@ -75,10 +77,10 @@ managed to serve at least 15 people in the short hour we were there.  Efficiency
 and openness is the impression that I am left with.
 
 
-## 和睦家
+## 和睦家 (hémùjiā)
 It is still unclear as to how, but Kelsey pulled some muscles in her stomach and
 was in a lot of pain recently.  I had the pleasure and lucky cultural experience
-with Stone to accompany her to 和睦家(hémùjiā--United Family Healthcare).  In
+with Stone to accompany her to 和睦家 (hémùjiā--United Family Healthcare).  In
 stark contrast with the previous hospital visits, 和睦家 was big, clean, full of
 officialness, full of English, and (had it not been for the traveler's
 insurance) very, very expensive.
