@@ -1586,6 +1586,9 @@ Card.prototype.render = function(options){
 
   $(function() {
     $('article a[href*="flickr.com"]')
+      .filter(function(index, element) {
+        return element.firstChild.tagName !== 'IMG';
+        })
       .addClass('flickrPhoto')
       .click(function(event) {
         event.preventDefault();

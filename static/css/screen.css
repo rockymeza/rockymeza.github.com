@@ -97,6 +97,18 @@ h2 {
 ul {
   list-style: disc; }
 
+em {
+  font-style: italic; }
+
+strong {
+  font-weight: bold; }
+
+sup {
+  font-size: 0.7em;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.5em; }
+
 header#header {
   text-align: center; }
   header#header h1 {
@@ -151,7 +163,7 @@ nav {
     -o-border-radius: 0.3em;
     background: white;
     color: black; }
-    #main #content ul {
+    #main #content ol, #main #content ul {
       padding-left: 2em; }
     #main #content a {
       color: #339933;
@@ -160,8 +172,17 @@ nav {
       padding: 1em; }
     #main #content h2 {
       font-size: 1.25em; }
+    #main #content img {
+      display: block;
+      margin: 0.5em auto; }
     #main #content .dsq-brlink, #main #content #disqus_thread a {
       color: black; }
+    #main #content .notice {
+      color: #666666;
+      font-style: italic;
+      font-size: .75em; }
+      #main #content .notice em {
+        font-style: normal; }
   #main #sidebar {
     display: inline;
     float: left;
@@ -173,7 +194,7 @@ nav {
     -o-border-radius: 0.3em;
     background: white;
     color: black; }
-    #main #sidebar ul {
+    #main #sidebar ol, #main #sidebar ul {
       padding-left: 2em; }
     #main #sidebar a {
       color: #339933;
@@ -229,7 +250,7 @@ footer {
   -o-border-radius: 0.3em;
   background: white;
   color: black; }
-  .home #blogs ul, .home #projects ul {
+  .home #blogs ol, .home #blogs ul, .home #projects ol, .home #projects ul {
     padding-left: 2em; }
   .home #blogs a, .home #projects a {
     color: #339933;
@@ -241,6 +262,10 @@ footer {
   color: #666666;
   font-size: 0.75em;
   margin-top: -1em; }
+.blog .footnotes {
+  font-size: 0.75em; }
+  .blog .footnotes ol {
+    list-style: decimal; }
 
 .flickrPhoto:after {
   content: '➚';
