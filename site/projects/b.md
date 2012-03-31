@@ -22,20 +22,26 @@ to the terminal.
 In order to make a bookmark, pass b a short name, and the directory that you
 want to bookmark.  For example:
 
-    $ b this /var/www/thisproject
+```bash
+$ b this /var/www/thisproject
+```
 
 Then, you can `cd` to that directory from anywhere by just passing the short
 name to b.
 
-    $ b this
-    # will cd to /var/www/thisproject
+```bash
+$ b this
+# will cd to /var/www/thisproject
+```
 
 Finally, you can view a list of bookmarks simply by running b with no
 parameters:
 
-    $ b
-    this,/var/www/thisproject
-    ...
+```bash
+$ b
+this,/var/www/thisproject
+...
+```
 
 ## How does b work?
 b stores bookmarks in plain text in `$BOOKMARKS_FILE`, and uses `grep` and

@@ -20,6 +20,7 @@ $green: #339933;
 
   ol, ul {
     padding-left: 2em;
+    margin-bottom: 1em;
   }
 
   a {
@@ -55,9 +56,12 @@ body {
   pre, code {
     @include border-radius(3px);
 
+    font-family: monospace;
+  }
+  
+  code {
     background-color: $lightgrey;
     color: black;
-    font-family: monospace;
     padding: 2px;
   }
 
@@ -65,10 +69,7 @@ body {
     margin-bottom: 1em;
     padding: 5px;
     width: 90%;
-
-    code {
-      padding: 0;
-    }
+    line-height: 1.5em;
   }
 }
 h1 {
