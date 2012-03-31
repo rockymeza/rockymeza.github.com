@@ -12,7 +12,7 @@ write about it.  I got sick, Alex's stomach had fire inside of it, I got sick
 again,  Kelsey hurt her abdomen; we have now experienced a fair amount of
 healthcare.  Each of our experiences was wildly different and if I had to sum up
 Chinese healthcare with one word, it would be "multi-faceted and
-variegated[^variegated]".
+variegated".
 
 
 ## 中国农业大学东区社区卫生服务中心 (zhōngguó nóngyè dàxué dōngqū shèqū wèishēng fúwù zhōngxīn)
@@ -115,9 +115,6 @@ To sum it up, healthcare in China comes in many packages and sizes.  You can get
 cheap treatment or expensive treatment, Western medicine or Chinese medicine.
 But most importantly, you can get treatment.  If you are sick you can get help
 and you can get better.
-
-## Footnotes
-[^variegated]:  OK, so that's three words.  Multi-faceto-variegated?
 {% endmarkdown %}
 <script>
 var disqus_identifier = '{{ uniqid }}';
