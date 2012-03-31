@@ -70,16 +70,16 @@ body {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -o-border-radius: 3px;
+    font-family: monospace; }
+  body code {
     background-color: #aaaaaa;
     color: black;
-    font-family: monospace;
     padding: 2px; }
   body pre {
     margin-bottom: 1em;
     padding: 5px;
-    width: 90%; }
-    body pre code {
-      padding: 0; }
+    width: 90%;
+    line-height: 1.5em; }
 
 h1 {
   font-family: Georgia;
@@ -164,7 +164,8 @@ nav {
     background: white;
     color: black; }
     #main #content ol, #main #content ul {
-      padding-left: 2em; }
+      padding-left: 2em;
+      margin-bottom: 1em; }
     #main #content a {
       color: #339933;
       text-decoration: none; }
@@ -195,7 +196,8 @@ nav {
     background: white;
     color: black; }
     #main #sidebar ol, #main #sidebar ul {
-      padding-left: 2em; }
+      padding-left: 2em;
+      margin-bottom: 1em; }
     #main #sidebar a {
       color: #339933;
       text-decoration: none; }
@@ -251,7 +253,8 @@ footer {
   background: white;
   color: black; }
   .home #blogs ol, .home #blogs ul, .home #projects ol, .home #projects ul {
-    padding-left: 2em; }
+    padding-left: 2em;
+    margin-bottom: 1em; }
   .home #blogs a, .home #projects a {
     color: #339933;
     text-decoration: none; }

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Rocky Meza</title>
+
+  <link rel="stylesheet" href="/static/css/screen.css?v=2012-03-31" type="text/css" media="screen">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="/static/js/r.js?v=2012-03-28"></script>
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body class="project">
+
+  <header id="header">
+    <h1><a href="/"><span class="rocky">Rocky</span> <img src="https://secure.gravatar.com/avatar/2eb6399115a962582e441abbd04c32dd?s=100"> <span class="meza">Meza</span></a></h1>
+  </header>
+
+  <nav>
+    <ul class="external">
+      <li><a href="http://www.github.com/rockymeza" class="github">GitHub</a>
+      <li><a href="http://www.twitter.com/rockymeza" class="twitter">Twitter</a>
+      <li><a href="http://www.flickr.com/photos/rockymeza" class="flickr">Flickr</a>
+      <li><a href="http://amzn.com/w/2JHIWNKFUCZ29" class="amazon">Amazon</a>
+    </ul>
+  </nav>
+
+  
+  <section id="main">
+    
+    <article id="content">
+      <div class="inner">
+        
+<h1>Exemplify.js, a simple demo tool</h1>
+
+<p>I wanted to write some examples for a JavaScript project of mine.  At first I
+was writing the examples and then copying and entitizing the code by hand to
+display the source of the example.  This quickly became to tedious for me and at
+the same time I felt a little disappointed that my documentation was not DRY.
+To that end, I have written a small jQuery plugin that will take a working
+JavaScript demo and display the source code for it on the page.</p>
+
+<h2>Introducing Exemplify</h2>
+
+<p>It takes a container element that has a child element with the class <code>example</code>.
+Exemplify extracts the HTML, CSS, and JavaScript from that example element and
+appends an element to the container to display the extracted code to the user.
+For example, if you had a container that looked something like this:</p>
+
+<pre><code class="html">&lt;article class=&quot;exemplify&quot;&gt;
+  &lt;h1&gt;The most basic things&lt;/h1&gt;
+
+  &lt;div class=&quot;example&quot;&gt;
+    &lt;p class=&quot;my_p&quot;&gt;&lt;/p&gt;
+
+    &lt;script&gt;
+    $(&#39;.my_p&#39;).awesome();
+    &lt;/script&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+</code></pre>
+
+<p>and you were to run the <code>exemplify</code> command, your resulting
+HTML would look something like this:</p>
+
+<pre><code class="html">&lt;article class=&quot;exemplify&quot;&gt;
+  &lt;h1&gt;The most basic things&lt;/h1&gt;
+
+  &lt;div class=&quot;example&quot;&gt;
+    &lt;p class=&quot;my_p&quot;&gt;&lt;/p&gt;
+
+    &lt;script&gt;
+    $(&#39;.my_p&#39;).awesome();
+    &lt;/script&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;source&quot;&gt;
+    &lt;h2&gt;HTML:&lt;/h2&gt;
+    &lt;pre&gt;
+      &lt;p class=&quot;my_p&quot;&gt;&lt;/p&gt;
+    &lt;/pre&gt;
+
+    &lt;h2&gt;JavaScript:&lt;/h2&gt;
+    &lt;pre&gt;&lt;code&gt;
+      $(&#39;.my_p&#39;).awesome();
+    &lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+</code></pre>
+
+<h2>Behind the Code</h2>
+
+<p>When I set out to write Exemplify, I had not planned on making it a jQuery
+plugin.  I knew that I was going to depend on jQuery, at least initially, for
+DOM manipulation.  If I had written cross-browser DOM manipulation from scratch
+I am not altogether sure just how long the source would be.</p>
+
+<p>The initial method of using Exemplify was an <code>init</code> method that you could call
+at the bottom of the page.  There was an <code>exemplify</code> method on the jQuery
+prototype, but only as glue so that I could write the <code>init</code> method more easily.
+I realized then that the <code>init</code> method provided no functionality that the jQuery
+method did not, so I decided to switch to providing Exemplify as a jQuery
+plugin.</p>
+
+<p>Currently, Exemplify exposes two other methods: <code>exemplify.exemplify</code> and
+<code>exemplify.wrapCode</code>.</p>
+
+<p><code>exemplify.exemplify</code>
+:  takes a container as its argument and appends the new HTML inside that container.</p>
+
+<p><code>exemplify.wrapCode</code>
+:  is the method that is used to transform the text value of the code into a
+   displayable element.  It is exposed to allow you to customize this output.</p>
+
+<h2>Examples</h2>
+
+<p>This tool would of course not be complete without demos:</p>
+
+<ul>
+<li> <a href="/exemplify/examples/basic.html">Basic Demo</a></li>
+<li> <a href="/exemplify/examples/syntax-highlighting.html">Syntax Highlighting</a></li>
+</ul>
+
+<h2>Contribute</h2>
+
+<p>Exemplify.js is hosted at <a href="https://www.github.com/rockymeza/exemplify">GitHub</a>.  You can follow development
+and contribute there.</p>
+
+      </div>
+    </article>
+    
+
+    
+    <aside id="sidebar">
+      <div class="inner">
+        
+<h2>Projects</h2>
+
+<ul>
+  
+  <li>
+    <a href="/projects/b.html">b</a>
+    
+    | <a href="https://www.github.com/rockymeza/b">github</a>
+    
+  </li>
+  
+  <li>
+    <a href="/projects/exemplify.html">Exemplify.js</a>
+    
+    | <a href="https://www.github.com/rockymeza/exemplify">github</a>
+    
+  </li>
+  
+</ul>
+
+<link rel="stylesheet" href="http://yandex.st/highlightjs/6.1/styles/zenburn.min.css">
+<script src="http://yandex.st/highlightjs/6.1/highlight.min.js"></script>
+<script>
+hljs.initHighlighting();
+</script>
+
+      </div>
+    </aside>
+    
+  </section>
+
+  <footer>
+    <p>2012 Rocky Meza (Built using <a href="https://github.com/colinta/StrangeCase">StrangeCase</a>)</p>
+  </footer>
+  <script type="text/javascript">
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-23031385-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+/* ]]> */
+</script>
+</body>
+</html>
