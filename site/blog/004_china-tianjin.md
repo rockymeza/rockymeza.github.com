@@ -9,7 +9,7 @@ author: Alex
 {% markdown %}
 
 Hello Folks, This is Alex here! Rocky's classmate and partner in crime for this
-blog so to speak Today I'll be picking up where Rocky left off.
+blog so to speak.  Today I'll be picking up where Rocky left off.
 
 With our medical worries behind us for now, and on the recommendation of a
 fictional doctor Rocky, Kelsey and I decided to leave the crowded bustling city
