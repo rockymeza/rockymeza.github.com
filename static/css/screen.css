@@ -184,25 +184,26 @@ nav {
       font-size: .75em; }
       #main #content .notice em {
         font-style: normal; }
-  #main #sidebar {
-    display: inline;
-    float: left;
-    width: 31.25%;
-    margin: 0 1.042%;
-    border-radius: 0.3em;
-    -webkit-border-radius: 0.3em;
-    -moz-border-radius: 0.3em;
-    -o-border-radius: 0.3em;
-    background: white;
-    color: black; }
-    #main #sidebar ol, #main #sidebar ul {
-      padding-left: 2em;
-      margin-bottom: 1em; }
-    #main #sidebar a {
-      color: #339933;
-      text-decoration: none; }
-    #main #sidebar .inner {
-      padding: 1em; }
+
+#sidebar {
+  display: inline;
+  float: left;
+  width: 31.25%;
+  margin: 0 1.042%;
+  border-radius: 0.3em;
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  -o-border-radius: 0.3em;
+  background: white;
+  color: black; }
+  #sidebar ol, #sidebar ul {
+    padding-left: 2em;
+    margin-bottom: 1em; }
+  #sidebar a {
+    color: #339933;
+    text-decoration: none; }
+  #sidebar .inner {
+    padding: 1em; }
 
 footer {
   *zoom: 1;
@@ -232,7 +233,12 @@ footer {
     float: left;
     width: 97.917%;
     margin: 0 1.042%;
-    margin-bottom: 1em; } }
+    margin-bottom: 1em; }
+  .home #main #sidebar {
+    display: inline;
+    float: left;
+    width: 97.917%;
+    margin: 0 1.042%; } }
 @media screen and (max-width: 400px) {
   header img {
     float: left; }
@@ -242,10 +248,6 @@ footer {
     -moz-transform: rotate(180deg);
     -o-transform: rotate(180deg); } }
 .home #blogs, .home #projects {
-  display: inline;
-  float: left;
-  width: 31.25%;
-  margin: 0 1.042%;
   border-radius: 0.3em;
   -webkit-border-radius: 0.3em;
   -moz-border-radius: 0.3em;
@@ -260,6 +262,21 @@ footer {
     text-decoration: none; }
   .home #blogs .inner, .home #projects .inner {
     padding: 1em; }
+.home #blogs {
+  display: inline;
+  float: left;
+  width: 47.917%;
+  margin: 0 1.042%; }
+.home #projects {
+  display: inline;
+  float: left;
+  width: 22.917%;
+  margin: 0 1.042%; }
+.home #sidebar {
+  display: inline;
+  float: left;
+  width: 22.917%;
+  margin: 0 1.042%; }
 
 .blog .byline {
   color: #666666;
