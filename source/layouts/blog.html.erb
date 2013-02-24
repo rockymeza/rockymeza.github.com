@@ -1,0 +1,26 @@
+<% wrap_layout :layout do %>
+
+  <% content_for :before_content do %>
+    <nav>
+      <strong>Blog</strong>
+      <ol>
+        <% blogs(blog.articles).each do |article| %>
+          <li><%= link_to article.title, article %></li>
+        <% end %>
+      </ol>
+    </nav>
+  <% end %>
+
+  <% content_for :breadcrumb do %>
+    <li>Blog
+    <li><%= current_page.title %>
+  <% end %>
+
+  <article>
+    <header>
+      <h1><%= current_page.title %></h1>
+    </header>
+
+    <%= yield %>
+  </article>
+<% end %>

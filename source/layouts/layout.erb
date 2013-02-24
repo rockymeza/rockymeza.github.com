@@ -18,13 +18,13 @@
       <nav>
         <ul>
           <li>
-            Internal
+            <strong>Internal</strong>
             <ul>
               <li><a href="">Blog</a>
             </ul>
           </li>
           <li>
-            External
+            <strong>External</strong>
             <ul>
               <li><a href="http://www.github.com/rockymeza">GitHub</a>
               <li><a href="http://www.flickr.com/photos/rockymeza">Flickr</a>
@@ -34,11 +34,24 @@
         </ul>
       </nav>
     </header>
+
     <div class="content">
+      <% if content_for?(:before_content) %>
+        <%= yield_content :before_content %>
+      <% end %>
+
       <section role="main">
+        <% if content_for?(:breadcrumb) %>
+          <ul class="breadcrumb">
+            <li><a href="/">Home</a>
+            <%= yield_content :breadcrumb %>
+          </ul>
+        <% end %>
+
         <%= yield %>
       </section>
     </div>
+
     <footer>
       <%= year %> Rocky Meza (<a href="https://github.com/rockymeza/rockymeza.com">view source</a>)
     </footer>

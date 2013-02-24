@@ -22,9 +22,17 @@ require "date"
 #   @which_fake_page = "Rendering a fake page with a variable"
 # end
 
+
+
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true,
+               :autolink => true, 
+               :smartypants => true
+
 activate :blog do |blog|
   blog.prefix = 'blog'
   blog.permalink = ':title.html'
+  blog.layout = 'blog'
 end
 
 activate :directory_indexes
@@ -40,6 +48,22 @@ activate :directory_indexes
 helpers do
   def year
     Date.today.year
+  end
+
+  def blogs(articles)
+    articles.select do |article|
+      article.data[:is_a] == 'blog'
+    end
+  end
+
+  def ruby(string)
+    chinese, pinyin = string.split('(').map { |s| s.chomp(')') }
+
+    pinyin = pinyin.split(' ')
+
+    '<ruby>' + chinese.split('').map { |char|
+      char + "<rt>#{pinyin.shift}</rt>"
+    }.join('') + '</ruby>'
   end
 end
 

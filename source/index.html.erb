@@ -15,7 +15,7 @@ title: Rocky Meza
   <section class="blog">
     <h1>Blog</h1>
     <ol>
-      <% blog.articles.select {|a| a.data[:is_a] == 'blog' }[0...10].each do |article| %>
+      <% blogs(blog.articles)[0...10].each do |article| %>
         <li><time datetime="<%= article.date.strftime('%FT%T') %>"><%= article.date.strftime('%F') %></time> <%= link_to article.title, article %></li>
       <% end %>
     </ol>

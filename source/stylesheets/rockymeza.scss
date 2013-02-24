@@ -33,6 +33,14 @@ body {
   background: $grey;
   color: $black;
   font: normal 16px sans-serif;
+
+  a {
+    color: $black;
+
+    &:hover {
+      color: lighten($black, 20%);
+    }
+  }
 }
 
 .wrapper {
@@ -76,6 +84,22 @@ body {
     }
   }
 
+  .breadcrumb {
+    @extend %list-style-none;
+
+    font-size: .7em;
+    margin-bottom: 1em;
+
+    li {
+      display: inline;
+
+      &:not(:last-child):after {
+        content: '> ';
+        color: grey;
+      }
+    }
+  }
+
   .content {
     [role=main] {
       background: white;
@@ -107,5 +131,29 @@ body {
 
   ol {
     @extend %list-style-none;
+  }
+}
+
+body.blog .content {
+  @extend %greed-container;
+
+  & > nav {
+    @include greed(25%);
+
+    ol {
+      @extend %list-style-none;
+    }
+  }
+
+  [role=main] {
+    @include greed(75%);
+
+    max-width: 700px;
+
+    article {
+      img {
+        display: block;
+      }
+    }
   }
 }
