@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <!-- Always force latest IE rendering engine or request Chrome Frame -->
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  
+  <title><%= data.page.title || "Rocky Meza" %></title>
+  
+  <%= stylesheet_link_tag "normalize", "rockymeza" %>
+  <%= javascript_include_tag  "all" %>
+</head>
+<body class="<%= page_classes %>">
+  <div class="wrapper">
+    <header>
+      <a href="/"><img src="https://secure.gravatar.com/avatar/2eb6399115a962582e441abbd04c32dd?s=100"> Rocky Meza</a>
+      <nav>
+        <ul>
+          <li>
+            Internal
+            <ul>
+              <li><a href="">Blog</a>
+            </ul>
+          </li>
+          <li>
+            External
+            <ul>
+              <li><a href="http://www.github.com/rockymeza">GitHub</a>
+              <li><a href="http://www.flickr.com/photos/rockymeza">Flickr</a>
+              <li><a href="https://soundcloud.com/rocky-meza">SoundCloud</a>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="content">
+      <section role="main">
+        <%= yield %>
+      </section>
+    </div>
+    <footer>
+      <%= year %> Rocky Meza (<a href="https://github.com/rockymeza/rockymeza.com">view source</a>)
+    </footer>
+  </div>
+</body>
+</html>

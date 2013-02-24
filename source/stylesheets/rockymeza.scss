@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+@import "greed";
+
+$black: #1a1a1a;
+$grey: #d4d4d4;
+
+%clearfix {
+  *zoom: 1;
+
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+%list-style-none {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  & > li {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+body {
+  background: $grey;
+  color: $black;
+  font: normal 16px sans-serif;
+}
+
+.wrapper {
+  margin: 1em auto 0 auto;
+  max-width: 1200px;
+
+  header {
+    @extend %greed-container;
+    
+    margin-bottom: 1em;
+
+    & > a {
+      @extend %clearfix;
+      @include greed(25%);
+
+      font-size: 3em;
+      font-weight: bold;
+      line-height: 1.1em;
+      text-decoration: none;
+      
+      img {
+        float: left;
+      }
+    }
+
+    & > nav {
+      @include greed(75%);
+
+      ul {
+        @extend %list-style-none;
+      }
+
+      & > ul {
+        display: table;
+
+        & > li {
+          display: table-cell;
+          min-width: 10em;
+        }
+      }
+    }
+  }
+
+  .content {
+    [role=main] {
+      background: white;
+      padding: 1em;
+
+      h1 {
+        margin: 0;
+      }
+    }
+
+    margin-bottom: 1em;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
+
+.buckets {
+  @extend %greed-container;
+
+  .blog, .projects {
+    @include greed(50%);
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  ol {
+    @extend %list-style-none;
+  }
+}

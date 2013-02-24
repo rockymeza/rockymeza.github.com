@@ -1,0 +1,26 @@
+---
+title: Rocky Meza
+---
+
+<h1>Welcome</h1>
+
+<p>
+  My name is Rocky.
+  I am a programmer at <a href="http://www.fusionbox.com/?utm_source=rockymeza.com&utm_medium=link&utm_campaign=rocky">Fusionbox</a>.
+  I studied political science at the <a href="http://ucdenver.edu">University of Colorado Denver</a>.
+  I play viola and tennis.
+</p>
+
+<div class="buckets">
+  <section class="blog">
+    <h1>Blog</h1>
+    <ol>
+      <% blog.articles.select {|a| a.data[:is_a] == 'blog' }[0...10].each do |article| %>
+        <li><time datetime="<%= article.date.strftime('%FT%T') %>"><%= article.date.strftime('%F') %></time> <%= link_to article.title, article %></li>
+      <% end %>
+    </ol>
+  </section>
+  <section class="projects">
+    <h1>Projects</h1>
+  </section>
+</div>

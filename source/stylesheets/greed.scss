@@ -1,0 +1,50 @@
+// Greed, for semantic fluid grids in SCSS
+//
+// Rocky Meza 2013
+
+// Percentage width of the gutter.
+$greed-gutter: 1.5% !default;
+
+// You can reverse the direction of the grid by setting this to
+// right.
+$greed-direction: left !default;
+
+// Only implements a microclearfix,
+// <http://nicolasgallagher.com/micro-clearfix-hack/>.
+%greed-container {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// Placeholder selector for all greeds.
+%_greed {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+
+  margin-left: $greed-gutter / 2;
+  margin-right: $greed-gutter / 2;
+}
+
+@mixin greed($percent) {
+  @extend %_greed;
+
+  @if ($percent == 100%) {
+    clear: both;
+    float: none;
+  } @else {
+    clear: none;
+    float: $greed-direction;
+  }
+
+  width: $percent - $greed-gutter;
+}
