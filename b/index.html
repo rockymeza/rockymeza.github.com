@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <!-- Always force latest IE rendering engine or request Chrome Frame -->
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  
+  <title>b Rocky Meza</title>
+  
+  <link href="/stylesheets/normalize.css?1365741767" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/rockymeza.css?1365741767" media="screen" rel="stylesheet" type="text/css" />
+  <script src="/javascripts/all.js?1365741767" type="text/javascript"></script>
+</head>
+<body class="b b_index">
+  <div class="wrapper">
+    <header>
+      <a href="/"><img src="https://secure.gravatar.com/avatar/2eb6399115a962582e441abbd04c32dd?s=100"> Rocky Meza</a>
+      <nav>
+        <ul>
+          <li>
+            <strong>Internal</strong>
+            <ul>
+              <li><a href="/blog/">Blog</a>
+              <li><a href="/projects/">Projects</a>
+            </ul>
+          </li>
+          <li>
+            <strong>External</strong>
+            <ul>
+              <li><a href="http://www.github.com/rockymeza">GitHub</a>
+              <li><a href="http://www.flickr.com/photos/rockymeza">Flickr</a>
+              <li><a href="https://soundcloud.com/rocky-meza">SoundCloud</a>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="content">
+      
+
+      <section role="main">
+        
+
+        <h1>b, a simple bookmarking system</h1>
+
+<p>I have a lot of projects on my computer.  They are not all in the same folder.
+They sometimes have similar names.  I used to spend a lot of time typing out
+<code>cd</code> commands.  <code>$ cd /var/www/this_project</code>, <code>$ cd ~/project/that_project</code>.  I
+usually have a couple terminals open per project, so it would take me a while to
+even get those terminals set up, before I could start to work.  This grew to be
+too tedious.</p>
+
+<h2>Introducing b</h2>
+
+<p>With b, you no longer have to remember those long directory names.  You don&#39;t
+even have to know where they are.  Make a bookmark once and never have to <code>cd</code>
+to that directory again.  b is a small shell script that adds nice bookmarking
+to the terminal.</p>
+
+<p>In order to make a bookmark, pass b a short name, and the directory that you
+want to bookmark.  For example:</p>
+
+<pre><code class="bash">$ b this /var/www/thisproject
+</code></pre>
+
+<p>Then, you can <code>cd</code> to that directory from anywhere by just passing the short
+name to b.</p>
+
+<pre><code class="bash">$ b this
+# will cd to /var/www/thisproject
+</code></pre>
+
+<p>Finally, you can view a list of bookmarks simply by running b with no
+parameters:</p>
+
+<pre><code class="bash">$ b
+this,/var/www/thisproject
+...
+</code></pre>
+
+<h2>How does b work?</h2>
+
+<p>b stores bookmarks in plain text in <code>$BOOKMARKS_FILE</code>, and uses <code>grep</code> and
+<code>sed</code>, just like a simple program should.  b is pretty much done, but there may
+be additional features in the future.  You can follow development and contribute
+on <a href="https://github.com/rockymeza/b">GitHub</a>.</p>
+
+      </section>
+    </div>
+
+    <footer>
+      2013 Rocky Meza (<a href="https://github.com/rockymeza/rockymeza.com">view source</a>)
+    </footer>
+  </div>
+</body>
+</html>
