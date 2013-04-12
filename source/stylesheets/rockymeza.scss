@@ -3,6 +3,7 @@
 @import "greed";
 
 $black: #1a1a1a;
+$lightgrey: lightgrey;
 $grey: #d4d4d4;
 
 %clearfix {
@@ -63,6 +64,7 @@ body {
       
       img {
         float: left;
+        margin-right: .25em;
       }
     }
 
@@ -127,6 +129,10 @@ body {
 
   h1 {
     font-size: 1.5em;
+
+    a {
+      text-decoration: none;
+    }
   }
 
   ol {
@@ -134,7 +140,7 @@ body {
   }
 }
 
-body.blog .content {
+body.blog:not(.blog_index) .content {
   @extend %greed-container;
 
   & > nav {
@@ -156,4 +162,20 @@ body.blog .content {
       }
     }
   }
+}
+
+body.projects {
+  ol.projects {
+    @extend %list-style-none;
+
+    li > a:first-child {
+      font-size: 2em;
+      font-weight: bold;
+    }
+  }
+}
+
+pre,
+code {
+  background: $lightgrey;
 }

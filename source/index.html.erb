@@ -6,14 +6,15 @@ title: Rocky Meza
 
 <p>
   My name is Rocky.
-  I am a programmer at <a href="http://www.fusionbox.com/?utm_source=rockymeza.com&utm_medium=link&utm_campaign=rocky">Fusionbox</a>.
+  I am a software developer at <a href="http://www.fusionbox.com/?utm_source=rockymeza.com&utm_medium=link&utm_campaign=rocky">Fusionbox</a>.
   I studied political science at the <a href="http://ucdenver.edu">University of Colorado Denver</a>.
   I play viola and tennis.
+  I like to learn languages.
 </p>
 
 <div class="buckets">
   <section class="blog">
-    <h1>Blog</h1>
+    <h1><a href="/blog/">Blog</a></h1>
     <ol>
       <% blogs(blog.articles)[0...10].each do |article| %>
         <li><time datetime="<%= article.date.strftime('%FT%T') %>"><%= article.date.strftime('%F') %></time> <%= link_to article.title, article %></li>
@@ -21,6 +22,10 @@ title: Rocky Meza
     </ol>
   </section>
   <section class="projects">
-    <h1>Projects</h1>
+    <h1><a href="/projects/">Projects</a></h1>
+    <ol>
+      <li><a href="/b/">b, a simple bookmarking system</a> (<a href="https://github.com/rockymeza/b">GitHub</a>)
+      <li><a href="/greed">Greed, Semantic fluid grids for SCSS</a> (<a href="https://github.com/rockymeza/greed">GitHub</a>)
+    </ol>
   </section>
 </div>
