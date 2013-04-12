@@ -6,7 +6,7 @@ build: config.rb $(SOURCE_FILES)
 deploy: build
 	cd build && \
 	git add . && \
-	git commit -am "`date +%F` deploy" && \
+	git commit -am "`date +%c` deploy" && \
 	git push origin master
 
 .PHONY: deploy
